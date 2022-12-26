@@ -27,8 +27,8 @@ body{
     align-items: flex-start; /* Alinha verticalmente a div no centro da pagina */
 }
 .logo{
-    height: 250px;
-    width: 250px;
+    width: 30vw;
+    height: 35vh;
 }
 .formulario{
     margin: 2%;
