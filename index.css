@@ -1,43 +1,131 @@
-*{
+:root {
+/******** Variaveis *******/
+    /* colors */
+    --hue: 240;
+    /* HSL color mode */
+    --base-color: hsl(var(--hue) 36% 57%);
+    --base-color-second: hsl(var(--hue) 65% 88%);
+    --base-color-alt: hsl(var(--hue) 57% 53%);
+    --title-color: hsl(var(--hue) 80% 20%);
+    --text-color: hsl(0 0% 46%);
+    --text-color-light: hsl(0 0% 98%);
+    --button-color: hsl(calc(var(--hue) + 30) 80% 60%);
+    --button-border-color: hsl(calc(var(--hue) + 30) 80% 70%);
+    --button-color-hover: hsl(calc(var(--hue) + 30) 80% 70%);
+
+}
+/******** Padrão *******/
+* {
     margin: 0px;
     padding: 0px;
     font-family: 'Josefin Sans', sans-serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
-body{
-    background-color: #19467D;
-}
-.container{
+
+body {
+    background-color: var(--base-color);
     width: 100vw;
     height: 100vh;
-    display: flex; /* Ajusta a largura da div de acordo com o conteudo*/
-    flex-direction: row;
-    justify-content: center; /* Alinha horizontalmente a div no centro da pagina */
-    align-items: center; /* Alinha verticalmente a div no centro da pagina */
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
-.squadCenter{
-    background-color: #2871C9;
+
+.container {
+    background-color: var(--base-color-second);
     width: 75vw;
-    height: 75vh;
-    border-radius: 15px;
-    display: flex; /* Ajusta a largura da div de acordo com o conteudo*/
+    border-radius: 2rem;
+    margin: 1rem;
+    padding-bottom: 2.5rem;
+}
+
+.row {
+    display: flex;
     flex-direction: row;
-    justify-content: center; /* Alinha horizontalmente a div no centro da pagina */
-    align-items: flex-start; /* Alinha verticalmente a div no centro da pagina */
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
 }
-.logo{
-    width: 30vw;
-    height: 35vh;
+
+/******** Colunas *******/
+
+.colum50 {
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    color: var(--text-color);  
 }
-.formulario{
-    margin: 2%;
+
+
+.icon-font {
+    height: 4rem;
 }
-.item{
-    margin: 2%;
+
+.title {
+    color: var(--title-color);
+    font-size: 2.3rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.enviar{
-    height: 25px;
-    width: 250px;
-    margin-top: 1%;
+
+.item-input {
+    align-items: center;
+    display: flex;
+    flex-flow: column;  
 }
+
+.button-calc {
+    text-size-adjust: 1rem;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: var(--text-color-light);
+    background-color: var(--button-color);
+    border: 0.2rem solid var(--button-border-color);
+    border-radius: 1rem;
+    margin: 0.3rem 0.5rem;
+    transition: 200ms;
+}
+
+.button-send {
+    align-items: center;
+    padding: 1rem 2rem;
+    color: var(--text-color-light);
+    background-color: var(--button-color);
+    border: 0.2rem solid var(--button-border-color);
+    border-radius: 1rem;
+    margin: 0.3rem 0.5rem;
+    transition: 200ms;
+}
+
+.button-send:hover, .button-calc:hover{
+    background-color: var(--button-color-hover);
+    border: 0.2rem solid var(--button-color);
+}
+
+.input50 {
+    width: 60%;
+    height: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/***** Formatação da Tabela *****/
+
+.table-input table {
+    background-color: var(--base-color);
+}
+
+.table-input td{
+    border: 0.15rem solid var(--base-color);
+    text-align: center;
+    
+}
+
+/***** End Formatação da Tabela *****/
+
+
+
+
